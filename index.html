@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com"> 
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">    
+    <link rel="stylesheet" href="css/style.css">
+    <title>TOXIN</title>
+</head>
+<body>
+    <!-- HEADER -->
+    <header class="header">
+        <div class="container">
+            <div class="header__inner">
+            	<img class="logo" src="img/Logo.svg" alt="logo">
+                <ul class="menu">
+                        <li class="menu__item">
+                            <a href="" class="menu__item-link">О нас</a>
+                        </li>
+                        <li class="menu__item">
+                            <a href="" class="menu__item-link">Услуги
+                                <svg class="menu__item-img">
+                                    <use href="img/icons.svg#arrow"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="menu__item">
+                            <a href="" class="menu__item-link">Вакансии</a>
+                        </li>
+                        <li class="menu__item">
+                            <a href="" class="menu__item-link">Новости</a>
+                        </li>
+                        <li class="menu__item">
+                            <a href="" class="menu__item-link">
+                                Соглашения
+                                <svg class="menu__item-img">
+                                    <use href="img/icons.svg#arrow"></use>
+                                </svg>
+                            </a>
+                        </li>
+                </ul>
+                <div class="header__buttons">
+                    <div class="header__button">
+                        <button class="button button__sub" id="sign-in"><span class="button__text">Войти</span></button>
+                    </div>
+                    <div class="header__button">
+                    <button class="button button__main" id="sign-up">Зарегистрироваться</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- HEADER END -->
+    <!-- SECTION HERO -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero__finder">
+                <h3 class="hero__finder-title">Найдём номера под ваши пожелания</h3>
+                <div class="hero__date">
+                    <div class="date__come">
+                        <div class="form__title">Прибытие</div> 
+                        <form class="hero__form">
+                            <input class="hero__input" type="text" name="" id="" placeholder="ДД.ММ.ГГГГ">
+                            <button type='button' class="hero__arrow" id="cal_arrow"><img class="arrow-img" src="img/arrow.svg" alt="arrow"></button>
+                        </form>
+                    </div>
+
+                    <div class="date__leave">
+                        <div class="form__title">Выезд</div> 
+                        <form class="hero__form">
+                            <input class="hero__input" type="text" name="" id="" placeholder="ДД.ММ.ГГГГ">
+                            <button type='button'class="hero__arrow" id="cal_arrow_2"><img class="arrow-img" src="img/arrow.svg" alt="arrow"></button>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="hero__guests">
+                    <div class="form__title">Гости</div> 
+                    <form class="hero__form">
+                        <input class="hero__input guest__input" type="text" name="" id="" placeholder="Сколько гостей">
+                        <button type='button' class="hero__arrow" id="guests"><img class="arrow-img" src="img/arrow.svg" alt="arrow"></button>
+                    </form>
+                </div>
+                <button class="button hero__button" id="choose"><a href="room.html">Подобрать номер</a><img class="arrow-img" src="img/arrow_forward.svg" alt="arrow"></button>
+
+                <div class="popup-cal" id="popup-cal">
+                    <div class="popup-cal__body">
+                        <div class="popup-cal__content">
+                            <div class="popup-cal__header">
+                                <img class="cal__img" src="img/violet-arrow_back.svg" alt="back">
+                                <div class="cal__picker">
+                                    <h4 class="cal__picker-month" id="picker-month">AВГУСТ</h4>
+                                    <h4 class="cal__picker-year" id="picker-year">2019</h4>
+                                </div>
+                                <img class="cal__img" src="img/violet-arrow_forward.svg" alt="forward">
+                            </div>
+                            <div class="cal__body">
+                                <div class="cal__week-day">
+                                    <div>Пн</div>
+                                    <div>Вт</div>
+                                    <div>Ср</div>
+                                    <div>Чт</div>
+                                    <div>Пт</div>
+                                    <div>Сб</div>
+                                    <div>Вс</div>
+                                </div>
+                                <div class="cal__days">
+                                    <div class="another-month">29</div>
+                                    <div class="another-month">30</div>
+                                    <div class="another-month">31</div>
+                                    <div>1</div>
+                                    <div>2</div>
+                                    <div>3</div>
+                                    <div>4</div>
+                                    <div>5</div>
+                                    <div>6</div>
+                                    <div>7</div>
+                                    <div class="today">8</div>
+                                    <div>9</div>
+                                    <div>10</div>
+                                    <div>11</div>
+                                    <div>12</div>
+                                    <div>13</div>
+                                    <div>14</div>
+                                    <div>15</div>
+                                    <div>16</div>
+                                    <div>17</div>
+                                    <div>18</div>
+                                    <div>19</div>
+                                    <div>20</div>
+                                    <div>21</div>
+                                    <div>22</div>
+                                    <div>23</div>
+                                    <div>24</div>
+                                    <div>25</div>
+                                    <div>26</div>
+                                    <div>27</div>
+                                    <div>28</div>
+                                    <div>29</div>
+                                    <div>30</div>
+                                    <div>31</div>
+                                    <div class="another-month">1</div>
+                                </div>
+                            </div>
+                            <div class="popup-cal__footer">
+                                <button class="footer__clean footer__button">Очистить</button>
+                                <button class="footer__use footer__button">Применить</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="popup-guests">
+                    <div class="popup-guests__body">
+                        <div class="popup-guests__content">
+                            <div class="guests__count">
+                                <span>3 гостя</span>
+                                <button class="hero__arrow"><img class="arrow-img" src="img/arrow.svg" alt="arrow"></button>
+                            </div>
+                            <div class="guests__list">
+                                <div class="guests__item">
+                                    <span class="guests__category">Взрослые</span>
+                                    <div class="guests__counter">
+                                        <button class="guests__operation">-</button>
+                                        <span>2</span>
+                                        <button class="guests__operation">+</button>
+                                    </div>
+                                </div>
+            
+                                <div class="guests__item">
+                                    <span class="guests__category">Дети</span>
+                                    <div class="guests__counter">
+                                        <button class="guests__operation">-</button>
+                                        <span>1</span>
+                                        <button class="guests__operation">+</button>
+                                    </div>
+                                </div>
+            
+                                <div class="guests__item">
+                                    <span class="guests__category">Младенцы</span>
+                                    <div class="guests__counter">
+                                        <button class="guests__operation">-</button>
+                                        <span>0</span>
+                                        <button class="guests__operation">+</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="guests__buttons">
+                                <button class="footer__clean footer__button">Очистить</button>
+                                <button class="footer__use footer__button" id="use">Применить</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero__text">
+                Лучшие номера для вашей работы,<br> отдыха и просто вдохновения
+            </div>
+        </div>
+    </section>
+    <!-- SECTION HERO END -->
+    <!-- SECTION FOOTER -->
+    <footer class="footer">
+        <div class="footer__inner">
+            <div class="container">
+                <div class="footer-top">
+                    <div class="footer__info">
+                        <img class="logo" src="img/Logo.svg" alt="logo">
+                        <p>Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»</p>
+                    </div>
+
+                    <div class="footer__info">
+                        <div class="footer__info-title">Навигация</div>
+                        <ul class="footer__list">
+                            <li class="footer__list-item"><a class="footer__list-link" href="">О нас</a></li>
+                            <li class="footer__list-item"><a class="footer__list-link" href="">Новости</a></li>
+                            <li class="footer__list-item"><a class="footer__list-link" href="">Служба поддержки</a></li>
+                            <li class="footer__list-item"><a class="footer__list-link" href="">Услуги</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer__info">
+                        <div class="footer__info-title">О нас</div>
+                        <ul class="footer__list">
+                            <li class="footer__list-item"><a class="footer__list-link" href="">О сервисе</a></li>
+                            <li class="footer__list-item"><a class="footer__list-link" href="">Наша команда</a></li>
+                            <li class="footer__list-item"><a class="footer__list-link" href="">Вакансии</a></li>
+                            <li class="footer__list-item"><a class="footer__list-link" href="">Инвесторы</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer__info">
+                        <div class="footer__info-title">Служба поддержки</div>
+                        <ul class="footer__list">
+                            <li class="footer__list-item"><a class="footer__list-link" href="">Соглашения</a></li>
+                            <li class="footer__list-item"><a class="footer__list-link" href="">Сообщества</a></li>
+                            <li class="footer__list-item"><a class="footer__list-link" href="">Связь с нами</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer__info">
+                        <div class="footer__info-title">Подписка</div>
+                        <p>Получайте специальные предложения и новости сервиса</p>
+                        <form class="footer__form">
+                            <input class="footer__input" type="email" name="" id="" placeholder="Email">
+                            <img class="arrow-img" src="img/arrow_forward.svg" alt="arrow">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="footer-bottom__inner">
+                    <div class="footer-bottom__copy">
+                        Copyright © 2018 Toxin отель. Все права защищены.
+                    </div>
+                    <div class="footer-bottom__social">
+                        <img class="social-img" src="img/tw.svg" alt="tw">
+                        <img class="social-img" src="img/fb.svg" alt="fb">
+                        <img class="social-img" src="img/in.svg" alt="in">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- SECTION FOOTER END -->
+    <div class="popup-registration">
+        <div class="popup-registration__body popup__body">
+            <div class="popup-registration__content popup__content">
+                <div class="registration__title popup__title">Регистрация аккаунта</div>
+                <div class="registration__information">
+                    <input class="name" type="text" placeholder="Имя">
+                    <input class="name" type="text" placeholder="Фамилия">
+                    <div class="sex">
+                        <div><input class="radio" type="radio" value="man">Мужчина</div>
+                        <div><input class="radio" type="radio" value="woman">Женщина</div>
+                    </div>
+                    <div class="registration__text">Дата рождения</div>
+                    <input class="date" type="date" placeholder="ДД.ММ.ГГГГ">
+                    <div class="registration__text">данные для входа в сервис</div>
+                    <input class="email" type="email" placeholder="E-mail">
+                    <input class="name" type="password" placeholder="Пароль">
+                    <div class="offer">
+                        <label class="switch">
+                            <input type="checkbox">
+                            <span class="slider"></span>
+                        </label>
+                        <span>Получать спецпредложения</span>
+                    </div>
+                    <button class="button hero__button" id="registrate">Зарегистрироваться<img class="arrow-img" src="img/arrow_forward.svg" alt="arrow"></button>
+                </div>
+                <div class="registration__sign-in">
+                    <span>Уже есть аккаунт на Toxin</span>
+                    <button class="button button__sub" id="go2"><span class="button__text">Войти</span></button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="popup-signin">
+        <div class="popup-signin__body">
+            <div class="popup-signin__content">
+                <div class="signin__title">Войти</div>
+                <form class="signin__information" id="form">
+                    <input class="email" type="email" placeholder="E-mail" id="email">
+                    <input class="password" type="password" placeholder="Пароль" id="password">
+                </form>
+                <button class="button hero__button" type="submit" id="go">Войти<img class="arrow-img" src="img/arrow_forward.svg" alt="arrow"></button>
+                <div class="signin__registration">
+                    <span>Нет аккаунта на Toxin?</span>
+                    <button class="button button__sub" id="create"><span class="button__text">Создать</span></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

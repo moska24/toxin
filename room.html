@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com"> 
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">    
+    <link rel="stylesheet" href="css/style.css">
+    <title>TOXIN</title>
+</head>
+<body>
+    <!-- HEADER -->
+    <header class="header">
+        <div class="container">
+            <div class="header__inner">
+            	<img class="logo" src="img/Logo.svg" alt="logo">
+                <ul class="menu">
+                        <li class="menu__item">
+                            <a href="" class="menu__item-link">О нас</a>
+                        </li>
+                        <li class="menu__item">
+                            <a href="" class="menu__item-link">Услуги
+                                <svg class="menu__item-img">
+                                    <use href="img/icons.svg#arrow"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="menu__item">
+                            <a href="" class="menu__item-link">Вакансии</a>
+                        </li>
+                        <li class="menu__item">
+                            <a href="" class="menu__item-link">Новости</a>
+                        </li>
+                        <li class="menu__item">
+                            <a href="" class="menu__item-link">
+                                Соглашения
+                                <svg class="menu__item-img">
+                                    <use href="img/icons.svg#arrow"></use>
+                                </svg>
+                            </a>
+                        </li>
+                </ul>
+                <div class="header__buttons">
+                    <div class="header__button">
+                        <button class="button button__sub" id="sign-in"><span class="button__text">Войти</span></button>
+                    </div>
+                    <div class="header__button">
+                        <button class="button button__main" id="sign-up">Зарегистрироваться</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- HEADER END -->
+    <!-- SECTION FINDER -->
+    <section class="finder">
+        <div class="container">
+            <div class="finder__inner">
+                <div class="finder__sidebar">
+                    <div class="sidebar__info">
+
+                        <div class="info">
+                            <div class="form__title">Даты пребывания в отеле</div> 
+                            <form class="hero__form">
+                                <input class="hero__input sidebar__input" type="text" name="" id="" placeholder="19 авг - 23 авг">
+                                <button type='button' class="hero__arrow" id="cal_arrow"><img class="arrow-img" src="img/arrow.svg" alt="arrow"></button>
+                            </form>
+                        </div>
+
+                        <div class="info">
+                            <div class="form__title">Гости</div> 
+                            <form class="hero__form">
+                                <input class="hero__input sidebar__input" type="text" name="" id="" placeholder="3 гостя, 1 младенец">
+                                <button type='button' class="hero__arrow" id="cal_arrow"><img class="arrow-img" src="img/arrow.svg" alt="arrow"></button>
+                            </form>
+                        </div>
+
+                        <div class="info">
+                            <div class="form__title">диапазон цены</div> 
+                            <form class="hero__form">
+                            </form>
+                        </div>
+
+                        <div class="info">
+                            <div class="form__title">Правила дома</div> 
+                            <form class="checkbox">
+                                <label class="checkbox__container">
+                                    <input class="checkbox__box" type="checkbox">
+                                    <span class="checkbox__mark"></span>
+                                    <div class="checkbox__content">
+                                        <div class="checkbox__text">Можно курить</div>
+                                    </div>
+                                </label>
+                                
+                                <label class="checkbox__container">
+                                    <input class="checkbox__box" type="checkbox" checked>
+                                    <span class="checkbox__mark"></span>
+                                    <div class="checkbox__content">
+                                        <div class="checkbox__text">Можно с питомцами</div>
+                                    </div>
+                                </label>
+                                
+                                <label class="checkbox__container">
+                                    <input class="checkbox__box" type="checkbox" checked>
+                                    <span class="checkbox__mark"></span>
+                                    <div class="checkbox__content">
+                                        <div class="checkbox__text">Можно пригласить гостей (до 10 человек)</div>
+                                    </div>
+                                </label>
+                            </form>
+                        </div>
+
+                        <div class="info">
+                            <div class="form__title">доступность</div> 
+                            <form class="checkbox">
+                                <label class="checkbox__container">                                        
+                                    <input class="checkbox__box" type="checkbox">
+                                    <span class="checkbox__mark"></span>
+                                    <div class="checkbox__content">
+                                        <div class="checkbox__title">Широкий коридор</div>
+                                        <div class="checkbox__text">Ширина коридоров в номере не менее 91 см.</div>
+                                    </div>
+                                </label>
+
+                                <label class="checkbox__container">                                        
+                                    <input class="checkbox__box" type="checkbox" checked>
+                                    <span class="checkbox__mark"></span>
+                                    <div class="checkbox__content">
+                                        <div class="checkbox__title">Помощник для инвалидов</div>
+                                        <div class="checkbox__text">На 1 этаже вас встретит специалист  и проводит до номера.</div>
+                                    </div>
+                                </label>
+                            </form>
+                        </div>
+
+                        <div class="info">
+                            <div class="form__title">удобства номера</div> 
+                            <form class="hero__form">
+                                <input class="hero__input sidebar__input" type="text" name="" id="" placeholder="2 спальни, 2 кровати...">
+                                <button type='button' class="hero__arrow" id="cal_arrow"><img class="arrow-img" src="img/arrow.svg" alt="arrow"></button>
+                            </form>
+                        </div>
+
+                        <div class="info__add">
+                            <div class="form__title">Дополнительные удобства</div>
+                            <button type='button' class="hero__arrow" id="cal_arrow"><img class="arrow-img" src="img/arrow.svg" alt="arrow"></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="finder__content">
+                    <h3 class="finder__title">Номера, которые мы для вас подобрали</h3>
+                    <div class="finder__cards">
+                        <div class="finder__card">
+                            <img class="finder__card-img" src="img/room/1.jpg" alt="card">
+                            <div class="finder__card-info">
+                                <div class="finder__card-description">
+                                    <div class="number">N888</div>
+                                    <div class="category">Люкс</div>
+                                    <div class="price"><span>9 990₽</span> в сутки</div>
+                                </div>
+                                <div class="finder__card-rating">
+                                    <div class="stars">
+                                        <img class="star" src="img/star.svg" alt="star">
+                                        <img class="star" src="img/star.svg" alt="star">
+                                        <img class="star" src="img/star.svg" alt="star">
+                                        <img class="star" src="img/star.svg" alt="star">
+                                        <img class="star" src="img/star.svg" alt="star">
+                                    </div>
+                                    <div class="rewievs">
+                                        <div class="rewiev"><span>145</span> Отзывов</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="finder__card">
+                            <img class="finder__card-img" src="img/room/2.jpg" alt="card">
+                            <div class="finder__card-info">
+                                <div class="finder__card-description">
+                                    <div class="number">N888</div>
+                                    <div class="category">Люкс</div>
+                                    <div class="price"><span>9 990₽</span> в сутки</div>
+                                </div>
+                                <div class="finder__card-rating">
+                                    <div class="stars">
+                                        <img class="star" src="img/star.svg" alt="star">
+                                        <img class="star" src="img/star.svg" alt="star">
+                                        <img class="star" src="img/star.svg" alt="star">
+                                        <img class="star" src="img/star.svg" alt="star">
+                                        <img class="star" src="img/star.svg" alt="star">
+                                    </div>
+                                    <div class="rewievs">
+                                        <div class="rewiev"><span>145</span> Отзывов</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="finder__card">
+                            <img class="finder__card-img" src="img/room/3.jpg" alt="card">
+                            <div class="finder__card-info">
+                                <div class="finder__card-description">
+                                    <div class="number">N888</div>
+                                    <div class="category">Люкс</div>
+                                    <div class="price"><span>9 990₽</span> в сутки</div>
+                                </div>
+                                <div class="finder__card-rating">
+                                    <div class="stars">
+                                        <img class="star" src="img/star.svg" alt="star">
+                                        <img class="star" src="img/star.svg" alt="star">
+                                        <img class="star" src="img/star.svg" alt="star">
+                                        <img class="star" src="img/star.svg" alt="star">
+                                        <img class="star" src="img/star.svg" alt="star">
+                                    </div>
+                                    <div class="rewievs">
+                                        <div class="rewiev"><span>145</span> Отзывов</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="finder__card">
+                            <img class="finder__card-img" src="img/room/4.jpg" alt="card">
+                            <div class="finder__card-info">
+                                <div class="finder__card-description">
+                                    <div class="number">N888</div>
+                                    <div class="category">Люкс</div>
+                                    <div class="price"><span>9 990₽</span> в сутки</div>
+                                </div>
+                                <div class="finder__card-rating">
+                                    <div class="stars">
+                                        <img class="star" src="img/star.svg" alt="star">
+                                        <img class="star" src="img/star.svg" alt="star">
+                                        <img class="star" src="img/star.svg" alt="star">
+                                        <img class="star" src="img/star.svg" alt="star">
+                                        <img class="star" src="img/star.svg" alt="star">
+                                    </div>
+                                    <div class="rewievs">
+                                        <div class="rewiev"><span>145</span> Отзывов</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="finder__card">
+                            <img class="finder__card-img" src="img/room/5.jpg" alt="card">
+                            <div class="finder__card-info">
+                                <div class="finder__card-description">
+                                    <div class="number">N888</div>
+                                    <div class="category">Люкс</div>
+                                    <div class="price"><span>9 990₽</span> в сутки</div>
+                                </div>
+                                <div class="finder__card-rating">
+                                    <div class="stars">
+                                        <img class="star" src="img/star.svg" alt="star">
+                                        <img class="star" src="img/star.svg" alt="star">
+                                        <img class="star" src="img/star.svg" alt="star">
+                                        <img class="star" src="img/star.svg" alt="star">
+                                        <img class="star" src="img/star.svg" alt="star">
+                                    </div>
+                                    <div class="rewievs">
+                                        <div class="rewiev"><span>145</span> Отзывов</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="finder__card">
+                            <img class="finder__card-img" src="img/room/6.jpg" alt="card">
+                            <div class="finder__card-info">
+                                <div class="finder__card-description">
+                                    <div class="number">N888</div>
+                                    <div class="category">Люкс</div>
+                                    <div class="price"><span>9 990₽</span> в сутки</div>
+                                </div>
+                                <div class="finder__card-rating">
+                                    <div class="stars">
+                                        <img class="star" src="img/star.svg" alt="star">
+                                        <img class="star" src="img/star.svg" alt="star">
+                                        <img class="star" src="img/star.svg" alt="star">
+                                        <img class="star" src="img/star.svg" alt="star">
+                                        <img class="star" src="img/star.svg" alt="star">
+                                    </div>
+                                    <div class="rewievs">
+                                        <div class="rewiev"><span>145</span> Отзывов</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="finder__card">
+                            <img class="finder__card-img" src="img/room/7.jpg" alt="card">
+                            <div class="finder__card-info">
+                                <div class="finder__card-description">
+                                    <div class="number">N888</div>
+                                    <div class="category">Люкс</div>
+                                    <div class="price"><span>9 990₽</span> в сутки</div>
+                                </div>
+                                <div class="finder__card-rating">
+                                    <div class="stars">
+                                        <img class="star" src="img/star.svg" alt="star">
+                                        <img class="star" src="img/star.svg" alt="star">
+                                        <img class="star" src="img/star.svg" alt="star">
+                                        <img class="star" src="img/star.svg" alt="star">
+                                        <img class="star" src="img/star.svg" alt="star">
+                                    </div>
+                                    <div class="rewievs">
+                                        <div class="rewiev"><span>145</span> Отзывов</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="finder__card">
+                            <img class="finder__card-img" src="img/room/8.jpg" alt="card">
+                            <div class="finder__card-info">
+                                <div class="finder__card-description">
+                                    <div class="number">N888</div>
+                                    <div class="category">Люкс</div>
+                                    <div class="price"><span>9 990₽</span> в сутки</div>
+                                </div>
+                                <div class="finder__card-rating">
+                                    <div class="stars">
+                                        <img class="star" src="img/star.svg" alt="star">
+                                        <img class="star" src="img/star.svg" alt="star">
+                                        <img class="star" src="img/star.svg" alt="star">
+                                        <img class="star" src="img/star.svg" alt="star">
+                                        <img class="star" src="img/star.svg" alt="star">
+                                    </div>
+                                    <div class="rewievs">
+                                        <div class="rewiev"><span>145</span> Отзывов</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="finder__card">
+                            <img class="finder__card-img" src="img/room/9.jpg" alt="card">
+                            <div class="finder__card-info">
+                                <div class="finder__card-description">
+                                    <div class="number">N888</div>
+                                    <div class="category">Люкс</div>
+                                    <div class="price"><span>9 990₽</span> в сутки</div>
+                                </div>
+                                <div class="finder__card-rating">
+                                    <div class="stars">
+                                        <img class="star" src="img/star.svg" alt="star">
+                                        <img class="star" src="img/star.svg" alt="star">
+                                        <img class="star" src="img/star.svg" alt="star">
+                                        <img class="star" src="img/star.svg" alt="star">
+                                        <img class="star" src="img/star.svg" alt="star">
+                                    </div>
+                                    <div class="rewievs">
+                                        <div class="rewiev"><span>145</span> Отзывов</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="finder__card">
+                            <img class="finder__card-img" src="img/room/10.jpg" alt="card">
+                            <div class="finder__card-info">
+                                <div class="finder__card-description">
+                                    <div class="number">N888</div>
+                                    <div class="category">Люкс</div>
+                                    <div class="price"><span>9 990₽</span> в сутки</div>
+                                </div>
+                                <div class="finder__card-rating">
+                                    <div class="stars">
+                                        <img class="star" src="img/star.svg" alt="star">
+                                        <img class="star" src="img/star.svg" alt="star">
+                                        <img class="star" src="img/star.svg" alt="star">
+                                        <img class="star" src="img/star.svg" alt="star">
+                                        <img class="star" src="img/star.svg" alt="star">
+                                    </div>
+                                    <div class="rewievs">
+                                        <div class="rewiev"><span>145</span> Отзывов</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="finder__card">
+                            <img class="finder__card-img" src="img/room/11.jpg" alt="card">
+                            <div class="finder__card-info">
+                                <div class="finder__card-description">
+                                    <div class="number">N888</div>
+                                    <div class="category">Люкс</div>
+                                    <div class="price"><span>9 990₽</span> в сутки</div>
+                                </div>
+                                <div class="finder__card-rating">
+                                    <div class="stars">
+                                        <img class="star" src="img/star.svg" alt="star">
+                                        <img class="star" src="img/star.svg" alt="star">
+                                        <img class="star" src="img/star.svg" alt="star">
+                                        <img class="star" src="img/star.svg" alt="star">
+                                        <img class="star" src="img/star.svg" alt="star">
+                                    </div>
+                                    <div class="rewievs">
+                                        <div class="rewiev"><span>145</span> Отзывов</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="finder__card">
+                            <img class="finder__card-img" src="img/room/12.jpg" alt="card">
+                            <div class="finder__card-info">
+                                <div class="finder__card-description">
+                                    <div class="number">N888</div>
+                                    <div class="category">Люкс</div>
+                                    <div class="price"><span>9 990₽</span> в сутки</div>
+                                </div>
+                                <div class="finder__card-rating">
+                                    <div class="stars">
+                                        <img class="star" src="img/star.svg" alt="star">
+                                        <img class="star" src="img/star.svg" alt="star">
+                                        <img class="star" src="img/star.svg" alt="star">
+                                        <img class="star" src="img/star.svg" alt="star">
+                                        <img class="star" src="img/star.svg" alt="star">
+                                    </div>
+                                    <div class="rewievs">
+                                        <div class="rewiev"><span>145</span> Отзывов</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- SECTION FINDER END -->
+    <!-- SECTION FOOTER -->
+    <footer class="footer">
+        <div class="footer__inner">
+            <div class="container">
+                <div class="footer-top">
+                    <div class="footer__info">
+                        <img class="logo" src="img/Logo.svg" alt="logo">
+                        <p>Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»</p>
+                    </div>
+
+                    <div class="footer__info">
+                        <div class="footer__info-title">Навигация</div>
+                        <ul class="footer__list">
+                            <li class="footer__list-item"><a class="footer__list-link" href="">О нас</a></li>
+                            <li class="footer__list-item"><a class="footer__list-link" href="">Новости</a></li>
+                            <li class="footer__list-item"><a class="footer__list-link" href="">Служба поддержки</a></li>
+                            <li class="footer__list-item"><a class="footer__list-link" href="">Услуги</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer__info">
+                        <div class="footer__info-title">О нас</div>
+                        <ul class="footer__list">
+                            <li class="footer__list-item"><a class="footer__list-link" href="">О сервисе</a></li>
+                            <li class="footer__list-item"><a class="footer__list-link" href="">Наша команда</a></li>
+                            <li class="footer__list-item"><a class="footer__list-link" href="">Вакансии</a></li>
+                            <li class="footer__list-item"><a class="footer__list-link" href="">Инвесторы</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer__info">
+                        <div class="footer__info-title">Служба поддержки</div>
+                        <ul class="footer__list">
+                            <li class="footer__list-item"><a class="footer__list-link" href="">Соглашения</a></li>
+                            <li class="footer__list-item"><a class="footer__list-link" href="">Сообщества</a></li>
+                            <li class="footer__list-item"><a class="footer__list-link" href="">Связь с нами</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer__info">
+                        <div class="footer__info-title">Подписка</div>
+                        <p>Получайте специальные предложения и новости сервиса</p>
+                        <form class="footer__form">
+                            <input class="footer__input" type="email" name="" id="" placeholder="Email">
+                            <img class="arrow-img" src="img/arrow_forward.svg" alt="arrow">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="footer-bottom__inner">
+                    <div class="footer-bottom__copy">
+                        Copyright © 2018 Toxin отель. Все права защищены.
+                    </div>
+                    <div class="footer-bottom__social">
+                        <img class="social-img" src="img/tw.svg" alt="tw">
+                        <img class="social-img" src="img/fb.svg" alt="fb">
+                        <img class="social-img" src="img/in.svg" alt="in">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- SECTION FOOTER END -->
+
+    <script src="js/script.js"></script>
+</body>
+</html>
+

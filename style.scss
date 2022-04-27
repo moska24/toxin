@@ -1,0 +1,898 @@
+@import 'var';
+@mixin button{
+    cursor: pointer;
+    border: 0;
+    padding:2px;
+    border-image: $gradient;
+    border-image-slice: 1;
+    height: 34px;
+    border-radius: 22px;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;
+    text-transform: uppercase;
+    color: #BC9CFF;
+    background-image: $gradient;
+}
+@mixin title{
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 29px;
+    color: $heading;
+    padding-bottom: 21px;
+}
+
+@mixin date{
+    padding-top: 6px;
+    width: 150px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid rgba(31, 32, 65, 0.25);
+    border-radius: 4px;
+    padding: 11px 15px 9px 15px;
+    margin-bottom: 20px;
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: $font;
+}
+.container{
+    max-width: 1160px;
+    margin: 0 auto;
+}
+.header{
+    box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+    &__inner{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 0;
+    }
+    &__buttons{
+        display: flex;
+        align-items: center;
+    }
+    &__button:first-child{
+        margin-right: 20px;
+    }
+}
+
+.menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 258px;
+    &__item{
+        list-style: none;
+        &:not(:last-child){
+        	margin-right: 20px;
+        }
+        &-link{
+		    display: flex;
+	        align-items:center;
+		    text-decoration: none;
+	        color: $gray;
+		    font-weight: normal;
+	        font-size: 14px;
+	        line-height: 17px;
+	        &:hover{
+		        color: $violet;
+		        fill: $violet;
+	        }
+	        &:hover .menu__item-img{
+		        fill: $violet;
+		    }
+		}
+        &-img{
+            fill: $gray;
+            padding-top: 2px;
+            margin-left: 5px;
+            height: 11px;
+            width: 13px;
+        }
+    }
+}
+
+.button__text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: $white;
+    height: 100%;
+    border-radius: 22px;
+    padding: 8px 18px;
+}
+.button__main{
+    @include button;
+    color: $white;
+    padding: 10px 22px;
+}
+.button__sub{
+    @include button;
+}
+.button__sub:hover{
+    opacity: 0.5;
+    color: $violet;
+}
+.button__main:hover{
+    opacity: 0.5;
+}
+
+.hero{
+    height: 830px;
+    background: url("../img/hero1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 70px;
+    &__finder{
+        position: relative;
+        background: $white;
+        padding: 40px 30px 30px 30px;
+        margin-bottom: 320px;
+        height: 374px;
+        max-width: 380px;
+        border: 1px solid rgba(0, 0, 0, 0.12);
+        box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+        border-radius: 4px;
+        &-title{
+            @include title;
+        }
+    }
+    &__date{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__guests{
+        margin-bottom: 30px;
+    }
+    &__form{
+        @include date;
+        &:last-child{
+            width: 100%;
+        }
+        &__guests{
+            margin-bottom: 301px;
+        }
+    }
+    &__input{
+        width: 103px;
+        border: none;
+        font-size: 14px;
+        line-height: 18px;
+    }
+    &__arrow{
+        cursor: pointer;
+        border: none;
+        background: $white;
+    }
+    &__text{
+        display: block;
+        right: 0;
+        font-size: 14px;
+        line-height: 24px;
+        text-align: right;
+        color: $gray2;
+        margin-bottom: 18px;
+    }
+}
+.guest__input{
+    width: 200px;
+}
+.form__title{
+    font-size: 12px;
+    line-height: 15px;
+    color: $heading;
+    padding-bottom: 6px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.hero__button{
+    @include button;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 44px;
+    position: relative;
+    color: $white;
+    & a{
+        text-decoration: none;
+        color: $white;
+    }
+    & .arrow-img{
+        position: absolute;
+        height: 15px;
+        width: 18px;
+        right: 12px;
+    }
+}
+.hero__button:hover{
+    opacity: 0.5;
+}
+
+////////////////////////
+/*.popup-cal{
+    display: none;
+}
+.popup-guests{
+    display: none;
+}*/
+////////////////////////
+
+.footer{
+    &__inner{
+        border-bottom: 2px solid $gray3;
+    }
+    &-top{
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-top: 113px;
+        margin-bottom: 101px;
+    }
+    &__info{
+        &-title{
+            font-weight: bold;
+            margin-bottom: 21px;
+            font-size: 12px;
+            line-height: 15px;
+            text-transform: uppercase;
+            color: $heading;
+        }
+    }
+    &__info:nth-child(1), &__info:nth-child(5){
+        max-width: 260px;
+        & p{
+            margin-top: 20px;
+            font-size: 14px;
+            line-height: 24px;
+            color: $gray2;
+        }
+    }
+    &__list{
+        &-item{
+            list-style-type: none;
+            margin-bottom: 20px;
+        }
+        &-link{
+            font-size: 14px;
+            line-height: 17px;
+            text-decoration: none;
+            color: $gray;
+        }
+    }
+    &__form{
+        margin-top: 20px;
+        padding: 12px 15px;
+        width: 100%;
+        border: 1px solid rgba(31, 32, 65, 0.25);
+        box-sizing: border-box;
+        border-radius: 4px;
+    }
+    &__input{
+        width: 200px;
+        font-size: 14px;
+        line-height: 24px;
+        color: $gray3;
+        border: none;
+    }
+    &-bottom{
+        &__inner{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        &__copy{
+            padding-top: 24px;
+            padding-bottom: 24px;
+            color: $gray2;
+        }
+    }
+}
+.social-img{
+    margin-left: 20px;
+}
+
+//
+//Всплывающее окно календарь
+//
+.popup-cal{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background:transparent;
+    top: 0;
+    left: 0;
+    padding-top: 370px;
+    /*чтобы анимировать, не используем display none, ставим opacity 0, visibility: hidden*/
+    opacity: 0;
+    visibility: hidden;
+    &__header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-bottom: 40px;
+    }
+    &__body{
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0;
+    }
+    &__content{
+        background-color: $white;
+        width: 320px;
+        height: 369px;
+        position: relative;
+        padding: 20px;
+        border: 1px solid rgba(31, 32, 65, 0.25);
+        box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+        border-radius: 4px;
+        }
+        &__footer{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+}
+.cal__picker{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+    font-size: 19px;
+    line-height: 23px;
+    color: $heading;
+    &-month{
+        margin-right: 10px;
+    }
+}
+.popup-cal__body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cal__body{
+    padding-bottom: 25px;
+}
+.cal__week-day{
+    display: grid;
+    gap: 18px;
+    grid-template-columns: repeat(7, 1fr);
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 25px;
+    color: $violet;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.cal__days{
+    display: grid;
+    text-align: center;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 25px;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 15px;
+    color: $gray;
+}
+.another-month{
+    color: #1F2041;
+    opacity: 0.25;
+}
+.footer__button{
+    color: $violet;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;
+    text-transform: uppercase;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    &:hover{
+        color: rgba(31, 32, 65, 0.5);
+    }
+}
+
+//
+//Всплывающее окно РЕГИСТРАЦИЯ
+//
+.popup-registration{
+    opacity: 0;
+    visibility: hidden;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background:transparent;
+    top: 0;
+    left: 0;
+    &__body{
+        min-height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &__content{
+        width: 380px;
+        background: $white;
+        border: 1px solid rgba(0, 0, 0, 0.12);
+        box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+        border-radius: 4px;
+        padding: 40px 30px;
+        display: flex;
+        flex-direction: column;
+    }
+
+}
+.registration__title{
+    text-align: left;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 29px;
+    color: $heading;
+    margin-bottom: 20px;
+}
+.registration__information{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.name, .email, .password, .date{
+    font-size: 14px;
+    line-height: 18px;
+    color: $gray3;
+    padding: 13px;
+    border: 1px solid rgba(31, 32, 65, 0.25);
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+.sex{
+    display: flex;
+    align-items: center;
+    & div{
+        display: flex;
+        align-items: center;
+        margin-right: 20px;
+        & .radio{
+            margin-right: 10px;
+            background: #FFFFFF;
+            width: 20px;
+            height: 20px;
+            border: 1px solid rgba(31, 32, 65, 0.25);
+            box-sizing: border-box;
+            border-radius: 10px;
+        }
+    }
+    
+}
+.registration__text{
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;
+    text-transform: uppercase;
+    color: $heading;
+    padding-top: 20px;
+    padding-bottom: 5px;
+}
+.offer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+    & span{
+        font-size: 14px;
+        line-height: 24px;  
+        color: $gray2;
+    }
+}
+
+.switch{
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 20px;
+    margin-right: 14px;
+}
+.switch input {
+    display:none;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    text-align: center;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 1px solid $gray3;
+    border-radius: 10px;
+  }
+  .checkbox{
+      width: 32px;
+  }
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 12px;
+    width: 12px;
+    left: 4px;
+    top: 3px;
+    background-color: $gray3;
+    border-radius: 10px;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+input:checked + .slider {
+    border: 1px solid #BC9CFF;
+}
+
+input:checked + .slider:before {
+    -webkit-transform: translateX(18px);
+    -ms-transform: translateX(18px);
+    transform: translateX(18px);
+    background-color: #BC9CFF;;
+}
+
+
+.registration__sign-in{
+    width: 320px;
+    padding-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    & .button__text{
+        font-weight: bold;
+        font-size: 12px;
+        line-height: 15px;
+        text-align: center;
+        text-transform: uppercase;
+        color: #BC9CFF;
+    }
+    & span{
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 18px;
+        color: #000;
+    }
+}
+//
+//Всплывающее окно ВОЙТИ
+//
+.popup-signin{
+    opacity: 0;
+    visibility: hidden;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background:transparent;
+    top: 0;
+    left: 0;
+    &__body{
+        min-height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &__content{
+        width: 380px;
+        background: $white;
+        border: 1px solid rgba(0, 0, 0, 0.12);
+        box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+        border-radius: 4px;
+        padding: 40px 30px;
+        display: flex;
+        flex-direction: column;
+    }
+
+}
+.signin__title{
+    text-align: left;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 29px;
+    color: $heading;
+    margin-bottom: 20px;
+}
+.signin__information{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+.email, .password{
+    font-size: 14px;
+    line-height: 18px;
+    color: $gray3;
+    padding: 13px;
+    border: 1px solid rgba(31, 32, 65, 0.25);
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.signin__registration{
+    width: 320px;
+    padding-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    & .button__text{
+        font-weight: bold;
+        font-size: 12px;
+        line-height: 15px;
+        text-align: center;
+        text-transform: uppercase;
+        color: #BC9CFF;
+    }
+    & span{
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 18px;
+        color: #000;
+    }
+}
+
+//
+//Всплывающее окно ГОСТИ
+//
+.popup-guests{
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background:transparent;
+    top: 0;
+    left: 0;        
+    padding-top: 333px;
+    &__body{
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0;
+    }
+    &__content{
+        background: $white;
+        width: 317px;
+        border: 1px solid rgba(31, 32, 65, 0.5);
+        box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+        border-radius: 2px;
+        display: flex;
+        flex-direction: column;
+    }
+}
+.guests{
+    &__count{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid rgba(31, 32, 65, 0.5);
+        padding: 13px 15px;
+        & span{
+            font-size: 14px;
+            line-height: 18px;
+            color: $gray2;
+        }
+    }
+    &__list{
+        padding: 13px 15px;
+    }
+    &__item{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 22px;
+    }
+    &__category{
+        font-weight: bold;
+        font-size: 12px;
+        line-height: 15px;
+        text-transform: uppercase;
+        color: $heading;
+    }
+    &__counter{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        & span{
+            font-weight: bold;
+            font-size: 12px;
+            line-height: 15px;
+            text-align: center;
+            text-transform: uppercase;
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+    }
+    &__operation{
+        border: 1px solid rgba(31, 32, 65, 0.25);
+        border-radius: 22px;
+        background: $white;
+        width: 30px;
+        height: 30px;
+        font-size: 18px;
+        line-height: 22px;
+        color: rgba(31, 32, 65, 0.5);
+    }
+    &__buttons{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 7px 15px 13px 15px;
+    }
+}
+
+.is-open{
+    opacity: 1;
+    visibility:visible;
+}
+.is-close{
+    opacity: 0;
+    visibility:hidden;
+}
+
+
+.bgHero{
+    background:url('../img/hero2.jpg');
+    background-repeat:no-repeat;
+    background-size: cover;
+}
+
+
+
+.finder{
+    border-bottom: 1px solid rgba(31, 32, 65, 0.25);
+    padding-bottom: 50px;
+    &__inner{
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        padding-top: 30px;
+    }
+    &__content{
+        width: 834px;
+        height: auto;
+    }
+    &__cards{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__card{
+        background: #FFFFFF;
+        box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+        border-radius: 4px;
+        width: 270px;
+        height:  257px;
+        margin-bottom: 21px;
+        &-img{
+            border-radius: 4px 4px 0 0;;
+        }
+        &-info{
+            margin: 20px;
+        }
+        &-description{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 10px;
+            border-bottom: 1px solid rgba(31, 32, 65, 0.1);
+            & .number{
+                font-weight: bold;
+                font-size: 14px;
+                line-height: 17px;
+                color: $heading;
+            }
+            & .category{
+                font-weight: bold;
+                font-size: 12px;
+                line-height: 15px;
+                text-transform: uppercase;
+                color: $violet;
+            }
+            & .price{
+                font-size: 14px;
+                line-height: 18px;
+                color: $gray;
+                & span{
+                    font-weight: bold;
+                }
+            }
+        }
+        &-rating{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 10px;
+            & .stars{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                & .star{
+                    height: 24px;
+                    width: 24px;
+                }
+            }
+            & .rewiev{
+                font-size: 14px;
+                line-height: 18px;
+                color: $gray;
+                & span{
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+    &__title{
+        @include title;
+    }
+}
+
+.sidebar__input{
+    width: 206px;
+    border: none;
+    font-size: 14px;
+    line-height: 18px;
+}
+
+//Чекбоксы 
+.checkbox{
+    margin-top: 15px;
+    &__container{
+        display: block;
+        margin-bottom: 20px;
+        width: 206px;
+        padding-right: 20px;
+    }
+    &__box{
+        position: absolute;
+        width: 1px;
+        height: 1px;overflow: hidden;
+        clip: rect(0 0 0 0);
+    }
+    &__mark{
+        width: 20px;
+        height: 20px;
+        border: 1px solid rgba(31, 32, 65, 0.25);
+        border-radius: 4px;
+        position: absolute;
+    }
+    &__content{
+        width: 100%;
+        margin-left: 30px;
+        font-size: 14px;
+        line-height: 18px;
+    }
+    &__title{
+        font-weight: bold;
+        color: $gray2;
+        margin-bottom: 5px;
+
+    }
+    &__text{
+        color: $gray;
+    }
+}
+
+.checkbox__box:checked + .checkbox__mark{
+
+    background: url(../img/Vector.svg) no-repeat center;
+    border: 1px solid #BC9CFF;
+    border-radius: 4px;
+}
+.info__add{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-right: 15px;
+}
